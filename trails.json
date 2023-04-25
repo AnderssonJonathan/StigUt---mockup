@@ -1,0 +1,34 @@
+{
+    "trails": [
+        {
+            "id": 1,
+            "name": "Änggårdsbergen",
+            "imageUrl": "trail1.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Sundsjöåsens naturreservat",
+            "imageUrl": "trail2.jpg"
+        },
+        {
+            "id": 3,
+            "name": "Hiaklitten",
+            "imageUrl": "trail3.jpg"
+        },
+        {
+            "id": 4,
+            "name": "Kullaberg",
+            "imageUrl": "trail4.jpg"
+        },
+        {
+            "id": 5,
+            "name": "Svarteskär",
+            "imageUrl": "trail5.jpg"
+        },
+        {
+            "id": 6,
+            "name": "Åkulla",
+            "imageUrl": "trail6.jpg"
+        }
+    ]
+}

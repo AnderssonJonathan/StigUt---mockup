@@ -1,0 +1,193 @@
+header {
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100vh;
+    gap: 15%;
+    z-index: 1;
+}
+
+header section {
+    margin-top: 1.8rem;
+    font-size: 2.5rem;
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+}
+
+header::before {
+    content: "";
+    background-image: url('/images/img-forest-mobile.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.75;
+    z-index: -1;
+}
+
+nav {
+    padding: 0 1rem;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+nav ul li.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    font-style: italic;
+}
+
+nav ul li.toggle {
+    order: 1;
+}
+
+nav ul li.menu-item{
+    position: relative;
+    display: none;
+    width: 100%;
+    text-align: center;
+    order: 2;
+    font-size: 2rem;
+}
+
+nav ul li a {
+    display: block;
+    padding: 0.4rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul:has(li .menu-btn:checked) .menu-item {
+    display: block;
+}
+
+nav ul li .menu-btn {
+    display: none;
+}
+
+nav ul li .menu-icon {
+    padding: 28px 20px;
+    cursor: pointer;
+}
+
+nav ul li .menu-icon .nav-icon {
+    background-color: #fff;
+    display: block;
+    height: 2px;
+    width: 18px;
+    position: relative;
+    transition: background-color 0.2s ease-out;
+}
+
+nav ul li .menu-icon .nav-icon::before, 
+nav ul li .menu-icon .nav-icon::after {
+    background-color: #fff;
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: -5px;
+    transition: all 0.2s ease-out;
+}
+
+/* nav ul li .menu-icon .nav-icon::before{
+    /* top: -5px;
+}*/
+
+nav ul li .menu-icon .nav-icon::after{
+    top: 5px; 
+}
+
+nav ul li .menu-btn:checked ~ .menu-icon .nav-icon {
+    background: transparent;
+}
+
+nav ul li .menu-btn:checked ~ .menu-icon .nav-icon::before {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+nav ul li .menu-btn:checked ~ .menu-icon .nav-icon::after {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.btn {
+    margin-top: 1rem;
+    width: 180px;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    background-color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.btn a {
+    display: block;
+    width: 180px;
+    background-color: #20262c;
+    color: #fff;
+    text-decoration: none;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.underline-on-hover:hover {
+    text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+    header section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        font-size: 3.5rem;
+    }
+    
+    nav {
+        height: 60px;
+    }
+
+    nav ul {
+        align-items:last baseline;
+        justify-content: center;
+        flex-wrap: nowrap;
+        gap: 50px;
+    }
+    
+    nav ul li.menu-item {
+        display: block;
+        width: auto;
+        font-size: 1.5rem;
+    }
+
+    nav ul li.logo {
+        position: absolute;
+        width: 40px;
+        top: -5px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+    }
+
+    nav ul li.toggle {
+        display: none;
+    }
+
+    header::before {
+        background-image: url('/images/img-forest.jpg')
+    }
+}

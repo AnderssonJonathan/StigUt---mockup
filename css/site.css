@@ -1,0 +1,37 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #20262c; 
+}
+
+h1 {
+    font-size: 3rem;
+    font-style: italic;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.header {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.main {
+    text-align: center;
+}
+
+.main article {
+    margin-top: 100px;
+}
+
+.listTrails {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 20px;
+    font-size: 2rem;
+    list-style: none;
+}
