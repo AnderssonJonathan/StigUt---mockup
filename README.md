@@ -1,1 +1,1 @@
-# StigUt---mockup
+# StigUt-mockup
